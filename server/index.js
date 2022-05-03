@@ -10,8 +10,15 @@ app.use(express.json()); // allows us to access the req.body
 //ROUTES//
 
 //get all todos
+app.get('/todos', async (req, res) => {
+  try {
+    const allTodos = await pool.query('SELECT * FROM todo');
+    res.json(allTodos.rows);
+  } catch (err) {}
+});
 
-//get a todo
+//get a todos
+
 
 //create a todo
 app.post('/todos', async (req, res) => {
