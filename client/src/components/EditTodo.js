@@ -4,7 +4,6 @@ const EditTodo = ({ todo }) => {
   const [description, setDescription] = useState(todo.description);
 
   //edit description function
-
   const updateDescription = async (e) => {
     e.preventDefault();
     try {
@@ -17,13 +16,11 @@ const EditTodo = ({ todo }) => {
           body: JSON.stringify(body),
         }
       );
-
       window.location = '/';
     } catch (err) {
       console.error(err.message);
     }
   };
-
   return (
     <>
       <button
@@ -34,7 +31,6 @@ const EditTodo = ({ todo }) => {
       >
         Edit
       </button>
-
       <div
         className='modal'
         id={`id${todo.todo_id}`}
@@ -53,7 +49,6 @@ const EditTodo = ({ todo }) => {
                 &times;
               </button>
             </div>
-
             <div className='modal-body'>
               <input
                 type='text'
@@ -62,7 +57,6 @@ const EditTodo = ({ todo }) => {
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-
             <div className='modal-footer'>
               <button
                 type='button'

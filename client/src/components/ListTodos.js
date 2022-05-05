@@ -29,11 +29,9 @@ const ListTodos = () => {
       console.error(err.message);
     }
   };
-
   useEffect(() => {
     getTodos();
   }, []);
-
   return (
     <>
       <table className='table mt-5 text-center'>
