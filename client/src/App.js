@@ -8,6 +8,7 @@ function App() {
     <div className='App'>
       <div className='container'>
         <InputTodo />
+        <ListTodos />
       </div>
     </div>
   );
