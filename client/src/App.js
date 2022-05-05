@@ -4,7 +4,13 @@ import EditTodo from './components/EditTodo';
 import './App.css';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <div className='App'>
+      <div className='container'>
+        <InputTodo />
+      </div>
+    </div>
+  );
 }
 
 export default App;
